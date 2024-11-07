@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylef.css">
+    <script defer src="app.js"></script>
+    <title>Formulário de Reserva</title>
+</head>
+<body>
+    <h1>Formulário de Reserva</h1>
+
+    <form action="processar-dados.php"
+    method="POST" data-form>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome" autocomplete="off" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Digite seu email" autocomplete="off" required>
+
+        <label for="telefone">Número de Telefone:</label>
+        <input type="tel" name="telefone" id="telefone" placeholder="Digite seu telefone" required>
+
+        <label for="data-chegada">Data de Chegada:</label>
+        <input type="date" name="data-chegada" id="data-chegada" required>
+
+        <label for="noites">Noites:</label>
+        <input type="number" name="noites" id="noites" min="1" required>
+
+        <label for="hospedes">Número de Hóspedes:</label>
+        <input type="number" name="hospedes" id="hospedes" min="1" required>
+
+        <label for="valor-total">Valor Total:</label>
+        <input type="text" name="valor-total" id="valor-total" readonly>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem"></textarea>
+
+        <button type="submit" data-button>Enviar</button>
+    </form>
+    <script src="calculo.js"></script>
+</html>
